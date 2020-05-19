@@ -36,7 +36,8 @@
             app:destination="@id/altaFragment" />
         <action
             android:id="@+id/action_despensaFragment_to_detalleFragment"
-            app:destination="@id/detalleFragment" />
+            app:destination="@id/detalleFragment"
+            />
         <action
             android:id="@+id/action_despensaFragment_to_mapaFragment"
             app:destination="@id/mapaFragment" />

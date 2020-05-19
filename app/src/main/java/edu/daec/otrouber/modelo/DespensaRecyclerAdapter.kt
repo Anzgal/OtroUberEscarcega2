@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import edu.daec.otrouber.R
@@ -22,7 +23,10 @@ class DespensaRecyclerAdapter( private val list: List<Item>)
         val item: Item = list[position]
         holder.bind(item)
         holder.itemView.setOnClickListener {
-            it.findNavController().navigate(R.id.altaFragment)
+
+            var bundle = bundleOf("item" to item)
+            it.findNavController().navigate(R.id.detalleFragment, bundle)
+
         }
     }
 
